@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="dashboard wide">
+        <h1>Cloud Attendance System</h1>
+        <h2>Student Dashboard</h2>
+        <p id="welcome">Welcome Student</p>
+
+        <div class="attendance-box">
+            <h3>Attendance Summary</h3>
+            <p><strong>Name:</strong> <span id="studentName">Loading...</span></p>
+            <p><strong>Roll No:</strong> <span id="rollNo">Loading...</span></p>
+            <p><strong>Class:</strong> <span id="studentClass">Loading...</span></p>
+            <p><strong>Records:</strong> <span id="recordCount">0</span></p>
+            <p><strong>Present:</strong> <span id="presentCount">0</span></p>
+            <p><strong>Attendance %:</strong> <span id="percentage">0%</span></p>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable"></tbody>
+            </table>
+        </div>
+
+        <div class="buttons">
+            <button id="logoutBtn" class="secondary">Logout</button>
+        </div>
+    </div>
+
+    <script type="module" src="../js/student.js"></script>
+</body>
+
+</html>

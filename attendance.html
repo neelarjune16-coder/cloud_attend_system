@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Records</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="dashboard wide">
+        <h1>Attendance Records</h1>
+
+        <div class="filters">
+            <input type="text" id="searchStudent" placeholder="Search student name or email">
+            <select id="filterSubject">
+                <option value="">All Subjects</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
+            <input type="date" id="filterDate">
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable"></tbody>
+            </table>
+        </div>
+
+        <div class="buttons">
+            <button id="backBtn" class="secondary">Back</button>
+        </div>
+    </div>
+
+    <script type="module" src="../js/attendance.js"></script>
+</body>
+
+</html>

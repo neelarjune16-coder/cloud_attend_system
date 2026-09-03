@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <h1>Cloud Attendance System</h1>
+        <h2>Admin Dashboard</h2>
+        <p>Welcome Admin</p>
+
+        <div class="attendance-box">
+            <h3>Dashboard Statistics</h3>
+            <p><strong>Total Teachers:</strong> <span id="teacherCount">0</span></p>
+            <p><strong>Total Students:</strong> <span id="studentCount">0</span></p>
+            <p><strong>Total Attendance Records:</strong> <span id="attendanceCount">0</span></p>
+            <p><strong>Present Percentage:</strong> <span id="attendancePercent">0%</span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="addTeacher">Add Teacher</button>
+            <button id="addStudent">Add Student</button>
+            <button id="viewTeachers">View Teachers</button>
+            <button id="viewStudents">View Students</button>
+            <button id="viewAttendance">View Attendance</button>
+            <button id="logoutBtn" class="secondary">Logout</button>
+        </div>
+    </div>
+
+    <script type="module" src="../js/admin.js"></script>
+</body>
+
+</html>

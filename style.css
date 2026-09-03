@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px;
+}
+
+.login-container,
+.dashboard {
+    width: 420px;
+    max-width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.dashboard.wide {
+    width: 860px;
+}
+
+.login-container h1,
+.dashboard h1 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.dashboard h2 {
+    margin-bottom: 12px;
+    color: #214b97;
+}
+
+.login-container p,
+.dashboard > p {
+    margin-bottom: 20px;
+    color: gray;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 10px;
+    margin: 16px 0 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+button:hover {
+    background: #2a5298;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+button.secondary {
+    background: #6c757d;
+}
+
+button.secondary:hover {
+    background: #5a6268;
+}
+
+button.active-present {
+    background: #198754;
+}
+
+button.active-absent {
+    background: #dc3545;
+}
+
+#message,
+.error {
+    margin-top: 15px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.success {
+    margin-top: 15px;
+    color: #198754;
+    font-weight: bold;
+}
+
+.hint {
+    min-height: 20px;
+    margin: 8px 0 0;
+    color: #214b97;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.attendance-box {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+.attendance-box h3 {
+    color: #214b97;
+    margin-bottom: 15px;
+}
+
+.attendance-box p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #1e3c72;
+    color: white;
+}
+
+.status-present {
+    color: #198754;
+    font-weight: bold;
+}
+
+.status-absent {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard,
+    .dashboard.wide,
+    .login-container {
+        width: 100%;
+        padding: 24px;
+    }
+}
