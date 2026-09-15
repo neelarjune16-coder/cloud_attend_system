@@ -4,37 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Teacher Dashboard - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
+
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
+        </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span>Faculty Portal</span>
+        </div>
+    </header>
+
     <div class="dashboard">
-        <h1>Cloud Attendance System</h1>
-        <h2>Teacher Dashboard</h2>
+        <h2>Faculty Operations</h2>
+        <h1>Mark Attendance</h1>
         <p id="welcome">Welcome Teacher</p>
 
-        <label for="subject"><strong>Select Subject</strong></label>
-        <select id="subject">
-            <option value="">Select Subject</option>
-            <option value="Cloud Computing">Cloud Computing</option>
-            <option value="Java">Java</option>
-            <option value="Python">Python</option>
-        </select>
+        <div class="form-group">
+            <label for="subject"><i class="fa-solid fa-book me-1"></i> Select Subject</label>
+            <div class="input-icon-wrapper">
+                <select id="subject">
+                    <option value="">Select Subject</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                </select>
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+        </div>
 
-        <label for="student"><strong>Select Student</strong></label>
-        <select id="student">
-            <option value="">Loading students...</option>
-        </select>
+        <div class="form-group">
+            <label for="student"><i class="fa-solid fa-user-graduate me-1"></i> Select Student</label>
+            <div class="input-icon-wrapper">
+                <select id="student">
+                    <option value="">Loading students...</option>
+                </select>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+
+        <label><i class="fa-solid fa-user-check me-1"></i> Attendance Status</label>
+        <div class="status-toggle-group">
+            <button type="button" id="presentBtn" class="btn-toggle">
+                <i class="fa-solid fa-circle-check"></i> Present
+            </button>
+            <button type="button" id="absentBtn" class="btn-toggle">
+                <i class="fa-solid fa-circle-xmark"></i> Absent
+            </button>
+        </div>
 
         <p id="statusHint" class="hint"></p>
 
         <div class="buttons">
-            <button id="presentBtn">Present</button>
-            <button id="absentBtn">Absent</button>
-            <button id="saveAttendance">Save Attendance</button>
-            <button id="viewAttendance">View Attendance</button>
-            <button id="logoutBtn" class="secondary">Logout</button>
+            <button id="saveAttendance">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Save Attendance Record
+            </button>
+            <button id="viewAttendance" class="secondary">
+                <i class="fa-solid fa-list-check"></i>
+                View Attendance Log
+            </button>
+            <button id="logoutBtn" class="secondary">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+            </button>
         </div>
     </div>
 

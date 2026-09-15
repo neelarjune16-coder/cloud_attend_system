@@ -4,25 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Student Dashboard - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
-    <div class="dashboard wide">
-        <h1>Cloud Attendance System</h1>
-        <h2>Student Dashboard</h2>
-        <p id="welcome">Welcome Student</p>
 
-        <div class="attendance-box">
-            <h3>Attendance Summary</h3>
-            <p><strong>Name:</strong> <span id="studentName">Loading...</span></p>
-            <p><strong>Roll No:</strong> <span id="rollNo">Loading...</span></p>
-            <p><strong>Class:</strong> <span id="studentClass">Loading...</span></p>
-            <p><strong>Records:</strong> <span id="recordCount">0</span></p>
-            <p><strong>Present:</strong> <span id="presentCount">0</span></p>
-            <p><strong>Attendance %:</strong> <span id="percentage">0%</span></p>
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
         </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span>Student Portal</span>
+        </div>
+    </header>
+
+    <div class="dashboard wide">
+        <h2>Student Overview</h2>
+        <h1 id="welcome">Welcome Student</h1>
+
+        <!-- Student Profile Box -->
+        <div class="attendance-box">
+            <h3><i class="fa-solid fa-id-card"></i> Student Profile Summary</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Full Name</span>
+                    <span class="value" id="studentName">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Roll Number</span>
+                    <span class="value" id="rollNo">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Class / Department</span>
+                    <span class="value" id="studentClass">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon records">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Total Classes</h4>
+                    <p id="recordCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon teachers">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Classes Attended</h4>
+                    <p id="presentCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon percent">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Overall Attendance</h4>
+                    <p id="percentage">0%</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="text-align: left; margin-top: 24px; font-size: 16px; font-weight: 700;">
+            <i class="fa-solid fa-clock-rotate-left"></i> Attendance History Log
+        </h3>
 
         <div class="table-wrap">
             <table>
@@ -37,8 +101,11 @@
             </table>
         </div>
 
-        <div class="buttons">
-            <button id="logoutBtn" class="secondary">Logout</button>
+        <div class="buttons" style="margin-top: 24px;">
+            <button id="logoutBtn" class="secondary">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+            </button>
         </div>
     </div>
 

@@ -4,27 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Teacher</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Add Teacher - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
-    <div class="dashboard">
-        <h1>Cloud Attendance System</h1>
-        <h2>Add Teacher</h2>
 
-        <input type="text" id="teacherName" placeholder="Teacher Name">
-        <input type="email" id="teacherEmail" placeholder="Teacher Email">
-        <input type="password" id="teacherPassword" placeholder="Login Password (min 6 characters)">
-        <input type="text" id="teacherDept" placeholder="Department">
-        <input type="text" id="teacherID" placeholder="Employee ID">
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
+        </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Faculty Registration</span>
+        </div>
+    </header>
 
-        <div class="buttons">
-            <button id="saveTeacher">Save Teacher</button>
-            <button id="backBtn" class="secondary">Back</button>
+    <div class="dashboard wide">
+        <h2>Administrator Registration</h2>
+        <h1>Add New Teacher</h1>
+        <p>Create a faculty account to allow marking class attendance</p>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="teacherName">Full Name</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="teacherName" placeholder="e.g. Dr. Sarah Connor">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="teacherEmail">Email Address</label>
+                <div class="input-icon-wrapper">
+                    <input type="email" id="teacherEmail" placeholder="teacher@institution.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="teacherPassword">Account Password</label>
+                <div class="input-icon-wrapper">
+                    <input type="password" id="teacherPassword" placeholder="Min 6 characters">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="teacherDept">Department</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="teacherDept" placeholder="e.g. Information Technology">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+            </div>
+
+            <div class="form-group" style="grid-column: span 2;">
+                <label for="teacherID">Employee ID</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="teacherID" placeholder="e.g. EMP-1002">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+            </div>
         </div>
 
         <p id="message"></p>
+
+        <div class="buttons horizontal" style="margin-top: 24px;">
+            <button id="saveTeacher">
+                <i class="fa-solid fa-user-check"></i>
+                Save Teacher Record
+            </button>
+            <button id="backBtn" class="secondary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+        </div>
     </div>
 
     <script type="module" src="js/addTeacher.js"></script>

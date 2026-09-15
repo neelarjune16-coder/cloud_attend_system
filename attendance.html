@@ -4,31 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Records</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Attendance Records - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
+
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
+        </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-database"></i>
+            <span>System Records</span>
+        </div>
+    </header>
+
     <div class="dashboard wide">
+        <h2>Attendance Management</h2>
         <h1>Attendance Records</h1>
+        <p>Filter, search, and audit student attendance submissions</p>
 
         <div class="filters">
-            <input type="text" id="searchStudent" placeholder="Search student name or email">
-            <select id="filterSubject">
-                <option value="">All Subjects</option>
-                <option value="Cloud Computing">Cloud Computing</option>
-                <option value="Java">Java</option>
-                <option value="Python">Python</option>
-            </select>
-            <input type="date" id="filterDate">
+            <div class="input-icon-wrapper">
+                <input type="text" id="searchStudent" placeholder="Search student name or email">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="input-icon-wrapper">
+                <select id="filterSubject">
+                    <option value="">All Subjects</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                </select>
+                <i class="fa-solid fa-filter"></i>
+            </div>
+            <div class="input-icon-wrapper">
+                <input type="date" id="filterDate">
+                <i class="fa-solid fa-calendar"></i>
+            </div>
         </div>
 
         <div class="table-wrap">
             <table>
                 <thead>
                     <tr>
-                        <th>Student</th>
-                        <th>Email</th>
+                        <th>Student Name</th>
+                        <th>Student Email</th>
                         <th>Subject</th>
                         <th>Status</th>
                         <th>Date</th>
@@ -38,8 +68,11 @@
             </table>
         </div>
 
-        <div class="buttons">
-            <button id="backBtn" class="secondary">Back</button>
+        <div class="buttons" style="margin-top: 24px;">
+            <button id="backBtn" class="secondary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </button>
         </div>
     </div>
 

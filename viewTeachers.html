@@ -4,20 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teachers</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Registered Teachers - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body data-role="teacher">
+
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
+        </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span>Faculty Directory</span>
+        </div>
+    </header>
+
     <div class="dashboard wide">
-        <h1>Teachers</h1>
+        <h2>Directory Registry</h2>
+        <h1>Faculty Members</h1>
+        <p>List of all registered teachers and faculty staff</p>
 
         <div class="table-wrap">
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Email</th>
+                        <th>Email Address</th>
                         <th>Department</th>
                         <th>Employee ID</th>
                     </tr>
@@ -26,8 +47,11 @@
             </table>
         </div>
 
-        <div class="buttons">
-            <button id="backBtn" class="secondary">Back</button>
+        <div class="buttons" style="margin-top: 24px;">
+            <button id="backBtn" class="secondary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </button>
         </div>
     </div>
 

@@ -4,31 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Admin Dashboard - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
-    <div class="dashboard">
-        <h1>Cloud Attendance System</h1>
-        <h2>Admin Dashboard</h2>
-        <p>Welcome Admin</p>
 
-        <div class="attendance-box">
-            <h3>Dashboard Statistics</h3>
-            <p><strong>Total Teachers:</strong> <span id="teacherCount">0</span></p>
-            <p><strong>Total Students:</strong> <span id="studentCount">0</span></p>
-            <p><strong>Total Attendance Records:</strong> <span id="attendanceCount">0</span></p>
-            <p><strong>Present Percentage:</strong> <span id="attendancePercent">0%</span></p>
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
+        </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>Administrator</span>
+        </div>
+    </header>
+
+    <div class="dashboard wide">
+        <h2>System Executive Summary</h2>
+        <h1>Admin Control Panel</h1>
+        <p>Manage institution records, faculty, students, and attendance analytics</p>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon teachers">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Teachers</h4>
+                    <p id="teacherCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon students">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Students</h4>
+                    <p id="studentCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon records">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Total Records</h4>
+                    <p id="attendanceCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon percent">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>Attendance Rate</h4>
+                    <p id="attendancePercent">0%</p>
+                </div>
+            </div>
         </div>
 
-        <div class="buttons">
-            <button id="addTeacher">Add Teacher</button>
-            <button id="addStudent">Add Student</button>
-            <button id="viewTeachers">View Teachers</button>
-            <button id="viewStudents">View Students</button>
-            <button id="viewAttendance">View Attendance</button>
-            <button id="logoutBtn" class="secondary">Logout</button>
+        <!-- Quick Actions Grid -->
+        <label><strong>Quick Actions</strong></label>
+        <div class="action-grid">
+            <button id="addTeacher" class="action-card">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Add New Teacher</span>
+            </button>
+            <button id="addStudent" class="action-card">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Add New Student</span>
+            </button>
+            <button id="viewTeachers" class="action-card">
+                <i class="fa-solid fa-users"></i>
+                <span>View Teachers</span>
+            </button>
+            <button id="viewStudents" class="action-card">
+                <i class="fa-solid fa-user-group"></i>
+                <span>View Students</span>
+            </button>
+            <button id="viewAttendance" class="action-card">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>View Attendance</span>
+            </button>
+        </div>
+
+        <div class="buttons" style="margin-top: 28px;">
+            <button id="logoutBtn" class="secondary">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+            </button>
         </div>
     </div>
 

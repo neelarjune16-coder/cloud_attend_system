@@ -4,28 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Add Student - Cloud Attendance</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
-    <div class="dashboard">
-        <h1>Cloud Attendance System</h1>
-        <h2>Add Student</h2>
 
-        <input type="text" id="studentName" placeholder="Student Name">
-        <input type="email" id="studentEmail" placeholder="Student Email">
-        <input type="password" id="studentPassword" placeholder="Login Password (min 6 characters)">
-        <input type="text" id="studentDept" placeholder="Class / Department">
-        <input type="text" id="studentRoll" placeholder="Roll Number">
-        <input type="text" id="studentID" placeholder="Student ID">
+    <header class="app-header">
+        <div class="app-brand">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Cloud Attendance</span>
+        </div>
+        <div class="user-badge">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>User Management</span>
+        </div>
+    </header>
 
-        <div class="buttons">
-            <button id="saveStudent">Save Student</button>
-            <button id="backBtn" class="secondary">Back</button>
+    <div class="dashboard wide">
+        <h2>Administrator Registration</h2>
+        <h1>Add New Student</h1>
+        <p>Register a new student account to enable login and attendance tracking</p>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="studentName">Full Name</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="studentName" placeholder="e.g. John Doe">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="studentEmail">Email Address</label>
+                <div class="input-icon-wrapper">
+                    <input type="email" id="studentEmail" placeholder="student@institution.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="studentPassword">Account Password</label>
+                <div class="input-icon-wrapper">
+                    <input type="password" id="studentPassword" placeholder="Min 6 characters">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="studentDept">Class / Department</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="studentDept" placeholder="e.g. Computer Science">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="studentRoll">Roll Number</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="studentRoll" placeholder="e.g. 101">
+                    <i class="fa-solid fa-hashtag"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="studentID">Student Unique ID</label>
+                <div class="input-icon-wrapper">
+                    <input type="text" id="studentID" placeholder="e.g. STU-2024-001">
+                    <i class="fa-solid fa-id-badge"></i>
+                </div>
+            </div>
         </div>
 
         <p id="message"></p>
+
+        <div class="buttons horizontal" style="margin-top: 24px;">
+            <button id="saveStudent">
+                <i class="fa-solid fa-user-check"></i>
+                Save Student Record
+            </button>
+            <button id="backBtn" class="secondary">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+        </div>
     </div>
 
     <script type="module" src="js/addStudent.js"></script>
